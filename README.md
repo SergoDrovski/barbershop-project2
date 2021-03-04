@@ -1,1 +1,1 @@
-# barbershop-project2
+# проект сайта барбершопа Borodinski
