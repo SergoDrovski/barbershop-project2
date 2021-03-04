@@ -1,0 +1,27 @@
+/** CSS STYLE **/
+:root {
+  
+}
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
