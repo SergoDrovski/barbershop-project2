@@ -1,0 +1,315 @@
+/*Переменные*/
+$bg-darkgrey: #292929;
+$bg-lightgrey: #f8f5f2;
+$table-width: 768px;
+$desktop-width: 1200px;
+
+@font-face {
+  font-weight: normal;
+  font-family: 'PT Sans Narrow';
+  src: url(../fonts/PTSansNarrow-Regular.ttf);
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'PT Sans Narrow';
+  src: url(../fonts/PTSansNarrow-Bold.ttf);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+h1, h2, p, ul, {
+  margin-top: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+body {
+  min-width: 320px;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #f7f4f1;
+  font-style: normal;
+
+  background-color: $bg-darkgrey;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header {
+  display: grid;
+}
+
+.page-header--logo {
+  display: block;
+
+  padding: 20px;
+
+  height: 85px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: flex-end;
+
+  height: 50px;
+
+  background-color: #826550;;
+}
+
+.main-nav--wrapper {
+  display: none;
+}
+
+@media (min-width: 660px) {
+  .main-nav {
+    order: -1;
+  }
+}
+
+.page-main {
+  margin: 0;
+}
+
+.stats {
+  color: black;
+
+  background-color: $bg-lightgrey;
+}
+
+.stats--item:nth-child(2n-1) {
+  background-color: #353535;
+}
+.stats--item:nth-child(2n) {
+  background-color: #4e4e4e;
+}
+
+.stats--item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  color: #f7f4f1;
+}
+
+.stats--legend--top {
+  display: none;
+}
+
+.stats--legend--bottom {
+  margin: 0;
+
+  color: #ffffff;
+
+  background-color: $bg-darkgrey;
+}
+
+.stats {
+  display: grid;
+}
+
+.stats--list {
+  display: contents;
+}
+
+@media (min-width: 660px) {
+
+  .stats--legend--top {
+    display: block;
+  }
+
+  .stats--legend--bottom {
+    display: none;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (min-width: 660px) and (max-width: 1023px) {
+  .stats--header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats--header {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+}
+
+
+
+
+.advantages--wrapper {
+  padding: 20px;
+}
+
+.advantages--list {
+  display: grid;
+  grid-gap: 25px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.advantages--list, .news--list {
+
+
+  list-style-type: none;
+}
+
+ .advantages--item, .news--item, .reviews--item {
+   background-color: #4e4e4e;
+ }
+
+@media (min-width: 1024px) {
+  .advantages--list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.news {
+  padding: 20px;
+
+  color: black;
+
+  background-color: $bg-lightgrey;
+}
+
+.news--list {
+  display: grid;
+  grid-gap: 25px;
+
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 660px) {
+  .news--list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .news--list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reviews {
+  color: black;
+
+  background-color: $bg-lightgrey;
+}
+
+.reviews--wrapper {
+  padding: 20px;
+}
+
+.reviews--write {
+  display: none;
+}
+
+.reviews--item {
+  margin: 0;
+}
+
+.page-footer {
+  background-color: $bg-darkgrey;
+}
+
+.social--title {
+  display: none;
+}
+
+.page-footer--contacts,
+.page-footer--social,
+.page-footer--copyright {
+  padding: 20px;
+
+  list-style-type: none;
+
+  background-color: #4e4e4e;
+}
+
+.page-footer--wrapper {
+  display: grid;
+}
+
+@media (min-width: 660px) {
+ .page-footer--wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 660px) and (max-width: 1024px) {
+  .page-footer--contacts {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .page-footer--social {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+  }
+}
+
+@media (max-width: 659px) {
+  .page-header,
+  .page-main,
+  .page-footer {
+    min-width: 280px;
+  }
+}
+
+@media (min-width: 660px) {
+  .page-header,
+  .page-main,
+  .page-footer {
+    margin: 0 auto;
+
+    max-width: 640px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .page-header,
+  .page-main,
+  .page-footer {
+    margin: 0 auto;
+
+    max-width: 960px;
+  }
+}
+
