@@ -394,6 +394,13 @@ img {
   background-color: #353535
 }
 .stats {
+  display: -ms-grid;
+  display: grid
+}
+.stats--list {
+  display: contents
+}
+.stats {
   color: #000;
   background-color: #f8f5f2
 }
@@ -405,9 +412,11 @@ img {
   color: #000;
   background-color: #fff
 }
+.stats--field,
 .stats--intro,
 .stats--legend,
-.stats--slogan {
+.stats--slogan,
+.stats--value {
   margin: 0;
   padding: 0
 }
@@ -424,6 +433,9 @@ img {
 .stats--intro {
   font-size: 20px;
   text-align: center
+}
+.stats--legend--top {
+  display: none
 }
 .stats--item:nth-child(1) {
   background-color: #404040
@@ -449,31 +461,127 @@ img {
   padding: 20px;
   color: #f7f4f1
 }
-.stats--legend--top {
-  display: none
+.stats--value {
+  position: relative;
+  font-size: 40px;
+  line-height: 1;
+  font-family: "PT Sans - Narrow Bold",sans-serif
 }
-.stats--legend--bottom {
-  margin: 0;
-  color: #fff;
-  background-color: #292929
+.stats--value sup {
+  position: absolute;
+  right: -.5em;
+  font-size: 25px
 }
-.stats {
-  display: -ms-grid;
-  display: grid
+.stats--field {
+  text-align: right;
+  line-height: 1
 }
-.stats--list {
-  display: contents
+.stats--legend-wrapper {
+  background-color: #242424
+}
+.stats--legend {
+  position: relative;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgba(255,255,255,.3);
+  font-size: 20px;
+  text-align: center
+}
+.stats--legend sup {
+  position: absolute;
+  top: 15%;
+  left: -3%
 }
 @media (min-width:660px) {
-  .stats--legend--top {
-    display: block
-  }
-  .stats--legend--bottom {
-    display: none
+  .stats {
+    position: relative;
+    top: -185px
   }
   .stats {
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2,1fr)
+  }
+  .stats--header {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 30px 40px
+  }
+  .stats--header::before {
+    position: absolute;
+    top: 27px;
+    left: -15px;
+    border: 15px solid transparent;
+    border-right-color: #fff;
+    content: "";
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg)
+  }
+  .stats--slogan {
+    margin-right: 100px;
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 40px;
+    line-height: 1;
+    text-align: left;
+    text-transform: none
+  }
+  .stats--intro {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+    text-transform: none
+  }
+  .stats--legend--top {
+    display: block;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 1.5%;
+    color: rgba(0,0,0,.3)
+  }
+  .stats--legend--bottom {
+    display: none
+  }
+  .stats--item {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 30px 40px 30px 40px
+  }
+  .stats--value {
+    -webkit-flex-basis: content;
+    -ms-flex-preferred-size: content;
+    flex-basis: content;
+    font-size: 72px
+  }
+  .stats--field {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left
+  }
+  .stats--field br {
+    display: none
+  }
+  .stats--value sup {
+    position: absolute;
+    right: -.5em;
+    font-size: 35px
   }
 }
 @media (min-width:660px) and (max-width:1023px) {
@@ -483,9 +591,17 @@ img {
     -ms-grid-column-span: 2;
     grid-column-end: 3
   }
+  .stats--intro,
+  .stats--slogan {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 205px;
+    -ms-flex: 0 1 205px;
+    flex: 0 1 205px
+  }
 }
 @media (min-width:1024px) {
   .stats {
+    top: -159px;
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3,1fr)
   }
@@ -497,7 +613,12 @@ img {
     -ms-grid-row: 1;
     grid-row-start: 1;
     -ms-grid-row-span: 2;
-    grid-row-end: 3
+    grid-row-end: 3;
+    padding-left: 40px;
+    padding-right: 68px
+  }
+  .stats--slogan {
+    margin-right: 0
   }
 }
 .advantages--wrapper {
