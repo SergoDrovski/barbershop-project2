@@ -1018,19 +1018,87 @@ img {
 .page-footer {
   background-color: #292929
 }
+.page-footer--wrapper {
+  display: -ms-grid;
+  display: grid;
+  padding-top: 32px;
+  padding-bottom: 25px
+}
+.page-footer--contacts {
+  padding-right: 20px;
+  padding-left: 20px
+}
+.contacts--title,
+.copyright--text {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center
+}
+.contacts--text {
+  margin: 0;
+  text-align: center
+}
+.contacts--phone {
+  margin-top: 16px
+}
+.contacts--phone,
+.copyright--link {
+  margin-right: auto;
+  margin-left: auto;
+  color: #fff;
+  border-color: #3f3f3f
+}
+.page-footer--social {
+  margin-top: 27px;
+  margin-bottom: 30px
+}
 .social--title {
   display: none
 }
-.page-footer--contacts,
-.page-footer--copyright,
-.page-footer--social {
-  padding: 20px;
-  list-style-type: none;
-  background-color: #4e4e4e
+.social--list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none
 }
-.page-footer--wrapper {
-  display: -ms-grid;
-  display: grid
+.social--item {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 214px;
+  -ms-flex: 1 1 214px;
+  flex: 1 1 214px;
+  height: 101px;
+  text-align: center
+}
+.social--link--vkontakte::before {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: calc(50% - 11px);
+  width: 23px;
+  height: 26px;
+  background-image: url(../img/v.png);
+  content: ""
+}
+.social--link--facebook::before {
+  position: absolute;
+  top: calc(50% - 19px);
+  left: calc(50% - 9px);
+  width: 18px;
+  height: 39px;
+  background-image: url(../img/facebook.png);
+  content: ""
+}
+.social--link--instagram::before {
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 18px);
+  width: 36px;
+  height: 36px;
+  background-image: url(../img/inst.png);
+  content: ""
 }
 @media (min-width:660px) {
   .page-footer--wrapper {
