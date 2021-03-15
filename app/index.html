@@ -67,30 +67,34 @@
     <section class="advantages content">
       <div class="advantages--wrapper slider">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="advantages--list slider--list">
-          <li class="advantages--item advantages--item--fast slider--item">
-            <h3 class="advantages--title">Быстро</h3>
+
+        <div class="advantages--list slider--list">
+          <input id="one" class="slider--toggle--btn" name="advantages" type="radio" checked>
+          <input id="two" class="slider--toggle--btn" name="advantages" type="radio">
+          <input id="three" class="slider--toggle--btn" name="advantages" type="radio">
+          <div class="advantages--item slider--item item-1">
+            <h3 class="advantages--title advantages--icon--fast">Быстро</h3>
             <p class="advantages--description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
-          </li>
-          <li class="advantages--item advantages--item--cool slider--item">
-            <h3 class="advantages--title">Круто</h3>
+          </div>
+          <div class="advantages--item slider--item item-2">
+            <h3 class="advantages--title advantages--icon--cool">Круто</h3>
             <p class="advantages--description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
               Во всяком случае внешне.
             </p>
-          </li>
-          <li class="advantages--item advantages--item--price slider--item">
-            <h3 class="advantages--title">Дорого</h3>
+          </div>
+          <div class="advantages--item  slider--item item-3">
+            <h3 class="advantages--title advantages--icon--price">Дорого</h3>
             <p class="advantages--description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
-          </li>
-        </ul>
-        <p class="advantages--toggles slider--toggles">
-          <button class="slider--toggle" type="button">1</button>
-          <button class="slider--toggle" type="button">2</button>
-          <button class="slider--toggle" type="button">3</button>
-        </p>
+          </div>
+        </div>
+        <div class="advantages--toggles slider--toggles">
+          <label for="one"  id="btn-one" class="advantages--toggles--wrapper"></label>
+          <label for="two" class="advantages--toggles--wrapper"></label>
+          <label for="three" class="advantages--toggles--wrapper"></label>
+        </div>
       </div>
     </section>
-
+    <div class="delta--background"></div>
     <section class="news">
       <div class="content">
         <h2 class="news--title">Новости и акции</h2>

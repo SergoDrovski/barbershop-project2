@@ -1,0 +1,16 @@
+.advantages--wrapper::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+
+  height: 68px;
+
+  background-image: url(../img/angle-div.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

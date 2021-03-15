@@ -452,15 +452,14 @@ img {
   }
 }
 
-/*------------------------------------------------------------------------------------------*/
-/*------------------------------------BLOCK STATISTIC---------------------------------------*/
-
 .page-main {
   margin: 0;
 
-  background-color: #353535;
+  background-color: #242424;
 }
 
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------BLOCK STATISTIC---------------------------------------*/
 
 .stats {
   display: grid;
@@ -575,10 +574,18 @@ img {
   position: absolute;
   top: 15%;
   left: -3%;
+}
 
+.stats--legend--bottom {
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 @media (min-width: 660px) {
+  .page-main {
+    background-color: #353535;
+  }
+
   .stats {
     position: relative;
     top: -185px;
@@ -676,6 +683,7 @@ img {
 }
 
 @media (min-width: 660px) and (max-width: 1023px) {
+
   .stats--header {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -713,36 +721,285 @@ img {
 /*------------------------------------BLOCK ADVANTAGES---------------------------------------*/
 
 .advantages--wrapper {
-  padding: 20px;
+  padding-top: 144px;
+  padding-right: 0;
+  padding-bottom: 5px;
+  padding-left: 0;
+
 }
 
 .advantages--list {
-  display: grid;
-  grid-gap: 25px;
+  display: flex;
 
   margin: 0;
   padding: 0;
-}
-
-.advantages--list, .news--list {
-
 
   list-style-type: none;
 }
 
- .advantages--item, .news--item, .reviews--item {
-   background-color: #4e4e4e;
- }
+.slider--toggle--btn {
+  display: none;
+}
 
-@media (min-width: 1024px) {
-  .advantages--list {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.item-1 {
+  display: none;
+}
+
+.item-2 {
+  display: none;
+}
+
+.item-3 {
+  display: none;
 }
 
 
+
+#one:checked ~ .item-1 {
+  display: block;
+}
+
+#two:checked ~ .item-2 {
+  display: block;
+}
+
+#three:checked ~ .item-3 {
+  display: block;
+}
+
+.advantages--item {
+  position: relative;
+}
+
+.advantages--title {
+  margin: 0;
+  padding: 0;
+
+  color: #f7f4f1;
+  font-size: 30px;
+  font-family: "PT Sans - Narrow Bold", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages--description {
+  margin: 0;
+  padding-left: 43px;
+  padding-right: 43px;
+
+  color: #f7f4f1;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: "PT Sans Narrow", sans-serif;
+  text-align: center;
+}
+
+.advantages--icon--fast::before {
+  position: absolute;
+  top: -119px;
+  left: calc(50% - 47px);
+
+  width: 95px;
+  height: 94px;
+  background-image: url(../img/advantage-1.png);
+
+  content: "";
+}
+
+.advantages--icon--cool::before {
+  position: absolute;
+  top: -119px;
+  left: calc(50% - 47px);
+
+  width: 95px;
+  height: 94px;
+  background-image: url(../img/advantage-2.png);
+
+  content: "";
+}
+
+.advantages--icon--price::before {
+  position: absolute;
+  top: -119px;
+  left: calc(50% - 47px);
+
+  width: 95px;
+  height: 94px;
+  background-image: url(../img/advantage-3.png);
+
+  content: "";
+}
+
+.advantages--toggles {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.advantages--toggles--wrapper {
+  position: relative;
+
+  width: 10px;
+  height: 10px;
+
+  transform: rotate(-45deg);
+
+  border: 2px solid #fff;
+}
+
+.advantages--toggles--wrapper:active,
+.advantages--toggles--wrapper:focus {
+  background-color: #fff;
+}
+
+.advantages--toggles--wrapper:nth-child(n+2) {
+  margin-left: 35px;
+}
+
+
+.delta--background {
+  margin-bottom: 11%;
+  padding: 3% 2rem 0;
+  background-color: #242424;
+  position: relative;
+}
+
+.delta--background::after {
+  content: '';
+  padding-top: 11%;
+
+  background: linear-gradient(to right top, #f8f5f2 49%, #242424 51%)left / 50.025% 100% no-repeat,
+  linear-gradient(to left top, #f8f5f2 49%, #242424 51%)right / 50.025% 100% no-repeat;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 660px) {
+
+  .advantages--toggles {
+    display: none;
+  }
+
+  .slider--item {
+    display: block;
+  }
+
+  .delta--background {
+    margin-bottom: 5%;
+    padding: 1% 2rem 0;
+    background-color: #353535;
+  }
+
+  .delta--background::after {
+    padding-top: 5%;
+
+    background: linear-gradient(to right top, #f8f5f2 49%, #353535 51%)left / 50.025% 100% no-repeat,
+    linear-gradient(to left top, #f8f5f2 49%, #353535 51%)right / 50.025% 100% no-repeat;
+  }
+
+}
+
+@media (min-width: 660px) and (max-width: 1023px) {
+  .advantages {
+    margin-top: -185px;
+  }
+
+  .advantages--wrapper {
+    padding-top: 0;
+    padding-right: 35px;
+    padding-left: 35px;
+    padding-bottom: 0;
+
+  }
+
+  .advantages--list {
+    flex-direction: column;
+  }
+
+  .advantages--item {
+    padding-top: 35px;
+    padding-bottom: 43px;
+    padding-left: 125px;
+  }
+
+ .advantages--item {
+    border-bottom: 1px solid rgba(130, 101, 80, 0.3);
+  }
+
+  .advantages--item:last-child {
+    border: none;
+  }
+
+  .advantages--icon--fast::before {
+    top: 47px;
+    left: -2px;
+  }
+
+  .advantages--icon--cool::before {
+    top: 46px;
+    left: -2px;
+  }
+
+  .advantages--icon--price::before {
+    top: 43px;
+    left: -2px;
+  }
+
+  .advantages--description,
+  .advantages--title {
+    padding-left: 0;
+    padding-right: 0;
+
+    text-align: left;
+  }
+
+}
+
+
+
+@media (min-width: 1024px) {
+  .advantages {
+    margin-top: -105px;
+  }
+
+  .advantages--wrapper {
+    padding-top: 0;
+  }
+
+
+  .advantages--item {
+    padding-top: 144px;
+
+    flex: 1 1 320px;
+  }
+
+  .advantages--item {
+    border-right: 1px solid rgba(130, 101, 80, 0.3);
+  }
+
+  .advantages--item:last-child {
+    border: none;
+  }
+
+  .advantages--icon--fast::before,
+  .advantages--icon--cool::before,
+  .advantages--icon--price::before {
+    top: 24px;
+  }
+
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/*------------------------------------BLOCK NEWS---------------------------------------------*/
+
+
 .news {
-  padding: 20px;
+  padding: 0;
 
   color: black;
 
@@ -836,7 +1093,8 @@ img {
 
 @media (min-width: 660px) {
   .content {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     max-width: 640px;
   }
@@ -845,7 +1103,8 @@ img {
 
 @media (min-width: 1024px) {
   .content {
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 
     max-width: 960px;
   }
