@@ -405,9 +405,9 @@ img {
   background-color: #f8f5f2
 }
 .stats--header {
-  padding-top: 30px;
+  padding-top: 27px;
   padding-left: 37px;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
   padding-right: 37px;
   color: #000;
   background-color: #fff
@@ -421,7 +421,7 @@ img {
   padding: 0
 }
 .stats--slogan {
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   padding-left: 30px;
   padding-right: 30px;
   font-size: 30px;
@@ -495,7 +495,7 @@ img {
   left: -3%
 }
 .stats--legend--bottom {
-  margin-top: 14px;
+  margin-top: 10px;
   margin-bottom: 14px
 }
 @media (min-width:660px) {
@@ -678,8 +678,9 @@ img {
 }
 .advantages--description {
   margin: 0;
-  padding-left: 43px;
+  padding-top: 5px;
   padding-right: 43px;
+  padding-left: 43px;
   color: #f7f4f1;
   font-size: 20px;
   line-height: 27px;
@@ -722,13 +723,13 @@ img {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 23px;
   margin-bottom: 0
 }
 .advantages--toggles--wrapper {
   position: relative;
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 16px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
@@ -762,7 +763,7 @@ img {
   .advantages--toggles {
     display: none
   }
-  .slider--item {
+  .advantages--item {
     display: block
   }
   .delta--background {
@@ -858,9 +859,9 @@ img {
 }
 .news--wrapper {
   position: relative;
-  padding-top: 35px;
+  padding-top: 30px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  padding-bottom: 28px;
   padding-left: 20px
 }
 .news--title {
@@ -1007,21 +1008,151 @@ img {
   background-color: #f8f5f2
 }
 .reviews--wrapper {
-  padding: 20px
+  position: relative;
+  padding-top: 28px;
+  padding-right: 20px;
+  padding-bottom: 9%;
+  padding-left: 20px
+}
+.reviews--title {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "PT Sans - Narrow Bold",sans-serif;
+  text-transform: uppercase;
+  text-align: center
 }
 .reviews--write {
   display: none
 }
 .reviews--item {
-  margin: 0
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin-top: 27px
+}
+.reviews--author-picture {
+  margin-top: 7px;
+  margin-bottom: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 50px;
+  -ms-flex: 0 0 50px;
+  flex: 0 0 50px
+}
+.reviews--text {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 1.5
+}
+.reviews--author-name {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 27px;
+  font-family: "PT Sans - Narrow Bold",sans-serif;
+  font-style: normal
+}
+.reviews--next,
+.reviews--prev {
+  display: none
+}
+.reviews--toggles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px
+}
+.slider--toggle--review:nth-child(n+2) {
+  margin-left: 35px
+}
+.slider--toggle--review {
+  display: block;
+  width: 12px;
+  height: 16px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border: 2px solid #000
+}
+.slider--toggle--review:active,
+.slider--toggle--review:hover {
+  background-color: #000
+}
+@media (min-width:660px) {
+  .reviews--list {
+    border: 1px solid #e5ddd5
+  }
+  .reviews--item {
+    margin-top: 0
+  }
+  .reviews--toggles {
+    position: absolute;
+    top: calc(100% - 34px);
+    left: calc(50% - 59px);
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f8f5f2
+  }
+}
+@media (min-width:660px) and (max-width:1023px) {
+  .reviews--list {
+    padding-top: 35px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    padding-left: 30px
+  }
+  .reviews--author-picture {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 80px;
+    -ms-flex: 0 0 80px;
+    flex: 0 0 80px;
+    background-color: #000;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle
+  }
+  .reviews--author-picture img {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+  }
 }
 .page-footer {
+  position: relative;
   background-color: #292929
+}
+.page-footer::after {
+  content: '';
+  padding-top: 11%;
+  background: -webkit-gradient(linear,left bottom,right top,color-stop(49%,#292929),color-stop(51%,#f8f5f2)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(49%,#292929),color-stop(51%,#f8f5f2)) right/50.025% 100% no-repeat;
+  background: -o-linear-gradient(left bottom,#292929 49%,#f8f5f2 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#292929 49%,#f8f5f2 51%) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right top,#292929 49%,#f8f5f2 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#292929 49%,#f8f5f2 51%) right/50.025% 100% no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0
 }
 .page-footer--wrapper {
   display: -ms-grid;
   display: grid;
-  padding-top: 32px;
+  padding-top: 27px;
   padding-bottom: 25px
 }
 .page-footer--contacts {
@@ -1107,6 +1238,9 @@ img {
   display: none
 }
 @media (min-width:660px) {
+  .page-footer::after {
+    display: none
+  }
   .page-footer--wrapper {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3,1fr);
