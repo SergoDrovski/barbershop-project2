@@ -651,27 +651,6 @@ img {
   padding: 0;
   list-style-type: none
 }
-.slider--toggle--btn {
-  display: none
-}
-.item-1 {
-  display: none
-}
-.item-2 {
-  display: none
-}
-.item-3 {
-  display: none
-}
-#one:checked ~ .item-1 {
-  display: block
-}
-#two:checked ~ .item-2 {
-  display: block
-}
-#three:checked ~ .item-3 {
-  display: block
-}
 .advantages--item {
   position: relative
 }
@@ -734,8 +713,11 @@ img {
   margin-top: 23px;
   margin-bottom: 0
 }
-.advantages--toggles--wrapper {
-  position: relative;
+.slider--toggle--advantages:nth-child(n+2) {
+  margin-left: 35px
+}
+.slider--toggle--advantages {
+  display: block;
   width: 16px;
   height: 16px;
   -webkit-transform: rotate(-45deg);
@@ -743,12 +725,12 @@ img {
   transform: rotate(-45deg);
   border: 2px solid #fff
 }
-.advantages--toggles--wrapper:active,
-.advantages--toggles--wrapper:focus {
+.slider--toggle--advantages:active,
+.slider--toggle--advantages:hover {
   background-color: #fff
 }
-.advantages--toggles--wrapper:nth-child(n+2) {
-  margin-left: 35px
+.active {
+  background-color: #fff
 }
 .delta--background {
   margin-bottom: 11%;
@@ -772,7 +754,7 @@ img {
     display: none
   }
   .advantages--item {
-    display: block
+    display: block!important
   }
   .delta--background {
     margin-bottom: 5%;
@@ -1094,7 +1076,7 @@ img {
 }
 .slider--toggle--review {
   display: block;
-  width: 12px;
+  width: 16px;
   height: 16px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -1105,7 +1087,7 @@ img {
 .slider--toggle--review:hover {
   background-color: #000
 }
-.active {
+.activeTwo {
   background-color: #000
 }
 @media (min-width:660px) {

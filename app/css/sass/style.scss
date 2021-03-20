@@ -745,35 +745,6 @@ img {
   list-style-type: none;
 }
 
-.slider--toggle--btn {
-  display: none;
-}
-
-.item-1 {
-  display: none;
-}
-
-.item-2 {
-  display: none;
-}
-
-.item-3 {
-  display: none;
-}
-
-
-
-#one:checked ~ .item-1 {
-  display: block;
-}
-
-#two:checked ~ .item-2 {
-  display: block;
-}
-
-#three:checked ~ .item-3 {
-  display: block;
-}
 
 .advantages--item {
   position: relative;
@@ -848,26 +819,28 @@ img {
   margin-bottom: 0;
 }
 
-.advantages--toggles--wrapper {
-  position: relative;
+.slider--toggle--advantages:nth-child(n+2) {
+  margin-left: 35px;
+}
 
+.slider--toggle--advantages {
+  display: block;
   width: 16px;
   height: 16px;
 
   transform: rotate(-45deg);
 
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
 }
 
-.advantages--toggles--wrapper:active,
-.advantages--toggles--wrapper:focus {
-  background-color: #fff;
+.slider--toggle--advantages:hover,
+.slider--toggle--advantages:active {
+  background-color: #ffffff;
 }
 
-.advantages--toggles--wrapper:nth-child(n+2) {
-  margin-left: 35px;
+.active {
+  background-color: #ffffff;
 }
-
 
 .delta--background {
   margin-bottom: 11%;
@@ -896,7 +869,7 @@ img {
   }
 
   .advantages--item {
-    display: block;
+    display: block !important;
   }
 
   .delta--background {
@@ -1291,7 +1264,7 @@ img {
 
 .slider--toggle--review {
   display: block;
-  width: 12px;
+  width: 16px;
   height: 16px;
 
   transform: rotate(-45deg);
@@ -1304,7 +1277,7 @@ img {
   background-color: #000000;
 }
 
-.active {
+.activeTwo {
   background-color: #000;
 }
 

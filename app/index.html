@@ -23,7 +23,6 @@
             <li class="site-list--item"><a href="#">Наши Работы</a></li>
             <li class="site-list--item"><a href="#">Записаться</a></li>
             <li class="site-list--item"><a href="#">Контакты</a></li>
-            <li class="site-list--item"><a href="#">HTML Academy</a></li>
           </ul>
 
           <ul class="main-nav--list user-list">
@@ -70,29 +69,26 @@
         <h2 class="visually-hidden">Преимущества</h2>
 
         <div class="advantages--list slider--list">
-          <input id="one" class="slider--toggle--btn" name="advantages" type="radio" checked>
-          <input id="two" class="slider--toggle--btn" name="advantages" type="radio">
-          <input id="three" class="slider--toggle--btn" name="advantages" type="radio">
-          <div class="advantages--item item-1">
+          <div class="advantages--item mySlidesOne">
             <h3 class="advantages--title advantages--icon--fast">Быстро</h3>
             <p class="advantages--description">Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки</p>
           </div>
-          <div class="advantages--item item-2">
+          <div class="advantages--item mySlidesOne">
             <h3 class="advantages--title advantages--icon--cool">Круто</h3>
             <p class="advantages--description">Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино.
               Во всяком случае внешне.
             </p>
           </div>
-          <div class="advantages--item item-3">
+          <div class="advantages--item mySlidesOne">
             <h3 class="advantages--title advantages--icon--price">Дорого</h3>
             <p class="advantages--description">Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?</p>
           </div>
         </div>
-        <div class="advantages--toggles slider--toggles">
-          <label for="one"  id="btn-one" class="advantages--toggles--wrapper"></label>
-          <label for="two" class="advantages--toggles--wrapper"></label>
-          <label for="three" class="advantages--toggles--wrapper"></label>
-        </div>
+        <p class="advantages--toggles">
+          <a class="slider--toggle--advantages active" onclick="currentSlideOne(1)"></a>
+          <a class="slider--toggle--advantages active"  onclick="currentSlideOne(2)"></a>
+          <a class="slider--toggle--advantages active" onclick="currentSlideOne(3)"></a>
+        </p>
       </div>
     </section>
     <div class="delta--background"></div>
@@ -126,26 +122,26 @@
 
     <section class="reviews">
       <div class="content">
-        <div class="reviews--wrapper slider">
+        <div class="reviews--wrapper">
           <h2 class="reviews--title">Отзывы о нас</h2>
           <a href="#" class="reviews--write button">Оставить отзыв</a>
 
           <div class="reviews--list">
-            <div class="reviews--item mySlides">
+            <div class="reviews--item mySlidesTwo">
               <p class="reviews--author-picture">
                 <img src="img/Layer-32.jpg" alt="Фото клиента" class="reviews--author-image">
               </p>
               <p class="reviews--text"><cite class="reviews--author-name">Трэвис Баркер</cite>
               Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
             </div>
-            <div class="reviews--item mySlides">
+            <div class="reviews--item mySlidesTwo">
               <p class="reviews--author-picture">
                 <img src="img/splash.jpg" alt="Фото клиента" class="reviews--author-image">
               </p>
               <p class="reviews--text"><cite class="reviews--author-name">Семён Семёныч</cite>
               Очень доволен, спасибо!</p>
             </div>
-            <div class="reviews--item mySlides">
+            <div class="reviews--item mySlidesTwo">
               <p class="reviews--author-picture">
                 <img src="img/h.jpg" alt="Фото клиента" class="reviews--author-image">
               </p>
@@ -155,10 +151,10 @@
             <button class="reviews--prev button" type="button" onclick="plusSlides(-1)">&#10094<span class="reviews--prev--small">Предыдущий отзыв</span></button>
             <button class="reviews--next button" type="button" onclick="plusSlides(1)">&#10095<span class="reviews--prev--small">Следующий отзыв</span></button>
           </div>
-          <p class="reviews--toggles slider--toggles">
-            <button class="slider--toggle--review active" type="button" onclick="currentSlide(1)"></button>
-            <button class="slider--toggle--review active" type="button" onclick="currentSlide(2)"></button>
-            <button class="slider--toggle--review active" type="button" onclick="currentSlide(3)"></button>
+          <p class="reviews--toggles">
+            <a class="slider--toggle--review activeTwo" onclick="currentSlide(1)"></a>
+            <a class="slider--toggle--review activeTwo"  onclick="currentSlide(2)"></a>
+            <a class="slider--toggle--review activeTwo" onclick="currentSlide(3)"></a>
           </p>
         </div>
       </div>
