@@ -55,11 +55,6 @@ body {
   background-color: #000000;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /*------------------------------------BLOCK PAGE HEADER---------------------------------------*/
 
 .page-header--wrapper {
@@ -731,7 +726,7 @@ img {
 .advantages--wrapper {
   padding-top: 144px;
   padding-right: 0;
-  padding-bottom: 5px;
+  padding-bottom: 12%;
   padding-left: 0;
 
 }
@@ -842,25 +837,6 @@ img {
   background-color: #ffffff;
 }
 
-.delta--background {
-  margin-bottom: 11%;
-  padding: 3% 2rem 0;
-  background-color: #242424;
-  position: relative;
-}
-
-.delta--background::after {
-  content: '';
-  padding-top: 11%;
-
-  background: linear-gradient(to right top, #f8f5f2 49%, #242424 51%)left / 50.025% 100% no-repeat,
-  linear-gradient(to left top, #f8f5f2 49%, #242424 51%)right / 50.025% 100% no-repeat;
-
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-}
 
 @media (min-width: 660px) {
 
@@ -871,20 +847,6 @@ img {
   .advantages--item {
     display: block !important;
   }
-
-  .delta--background {
-    margin-bottom: 5%;
-    padding: 2% 2rem 0;
-    background-color: #353535;
-  }
-
-  .delta--background::after {
-    padding-top: 5%;
-
-    background: linear-gradient(to right top, #f8f5f2 49%, #353535 51%)left / 50.025% 100% no-repeat,
-    linear-gradient(to left top, #f8f5f2 49%, #353535 51%)right / 50.025% 100% no-repeat;
-  }
-
 }
 
 @media (min-width: 660px) and (max-width: 1023px) {
@@ -896,8 +858,7 @@ img {
     padding-top: 0;
     padding-right: 35px;
     padding-left: 35px;
-    padding-bottom: 0;
-
+    padding-bottom: 8%;
   }
 
   .advantages--list {
@@ -952,6 +913,7 @@ img {
 
   .advantages--wrapper {
     padding-top: 0;
+    padding-bottom: 11%;
   }
 
 
@@ -975,14 +937,6 @@ img {
     top: 24px;
   }
 
-  .delta--background {
-    margin-bottom: 5.5%;
-  }
-
-  .delta--background::after {
-    padding-top: 6%;
-  }
-
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -990,6 +944,8 @@ img {
 
 
 .news {
+  position: relative;
+
   padding: 0;
 
   color: black;
@@ -997,6 +953,19 @@ img {
   border-bottom: 1px solid #e5ddd5;
 
   background-color: $bg-lightgrey;
+}
+
+.news::after {
+  content: '';
+  padding-top: 11%;
+
+  background: linear-gradient(to right top, #f8f5f2 49%, #242424 51%)left / 50.025% 100% no-repeat,
+  linear-gradient(to left top, #f8f5f2 49%, #242424 51%)right / 50.025% 100% no-repeat;
+
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
 }
 
 .news--wrapper {
@@ -1110,6 +1079,13 @@ img {
 
 
 @media (min-width: 660px) {
+  .news::after {
+    padding-top: 6%;
+
+    background: linear-gradient(to right top, #f8f5f2 49%, #353535 51%)left / 50.025% 100% no-repeat,
+    linear-gradient(to left top, #f8f5f2 49%, #353535 51%)right / 50.025% 100% no-repeat;
+  }
+
   .news--wrapper {
     padding-top: 50px;
     padding-right: 0;
@@ -1157,6 +1133,13 @@ img {
 }
 
 @media (min-width: 1024px) {
+  .news::after {
+    padding-top: 4%;
+
+    background: linear-gradient(to right top, #f8f5f2 50%, #353535 51%)left / 50.025% 100% no-repeat,
+    linear-gradient(to left top, #f8f5f2 50%, #353535 51%)right / 50.025% 100% no-repeat;
+  }
+
   .news--wrapper {
     padding-top: 68px;
     padding-bottom: 40px;
@@ -1222,7 +1205,12 @@ img {
 .reviews--author-picture {
   margin-top: 7px;
   margin-bottom: 0;
-  flex: 0 0 50px;
+  flex: 0 0 80px;
+}
+
+.reviews--author-picture img {
+  width: 100%;
+  height: auto;
 }
 
 .reviews--text {
@@ -1389,6 +1377,8 @@ img {
     display: flex;
     flex: 0 0 80px;
 
+    height: 80px;
+
     background-color: black;
 
     border-radius: 50%;
@@ -1400,6 +1390,9 @@ img {
 
   .reviews--author-picture img {
     align-items: center;
+
+    width: auto;
+    height: 80px;
   }
 
   .reviews--toggles {
@@ -1446,13 +1439,23 @@ img {
   }
 
   .reviews--author-picture {
-    flex: 0 0 250px;
+    position: relative;
 
-    height: 100%;
+    flex: 0 0 250px;
 
     margin: 0;
 
+    min-height: 160px;
+
     overflow: hidden;
+  }
+
+
+  .reviews--author-picture img {
+    position: absolute;
+
+    width: auto;
+    height: 100%;
   }
 
   .reviews--text {
@@ -1463,9 +1466,7 @@ img {
 
   }
 
-  .reviews--author-picture img {
-    vertical-align: middle;
-  }
+
 
   .reviews--prev {
     left: -72px;
