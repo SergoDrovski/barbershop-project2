@@ -639,7 +639,7 @@ img {
 .advantages--wrapper {
   padding-top: 144px;
   padding-right: 0;
-  padding-bottom: 5px;
+  padding-bottom: 12%;
   padding-left: 0
 }
 .advantages--list {
@@ -650,27 +650,6 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none
-}
-.slider--toggle--btn {
-  display: none
-}
-.item-1 {
-  display: none
-}
-.item-2 {
-  display: none
-}
-.item-3 {
-  display: none
-}
-#one:checked ~ .item-1 {
-  display: block
-}
-#two:checked ~ .item-2 {
-  display: block
-}
-#three:checked ~ .item-3 {
-  display: block
 }
 .advantages--item {
   position: relative
@@ -734,8 +713,11 @@ img {
   margin-top: 23px;
   margin-bottom: 0
 }
-.advantages--toggles--wrapper {
-  position: relative;
+.slider--toggle--advantages:nth-child(n+2) {
+  margin-left: 35px
+}
+.slider--toggle--advantages {
+  display: block;
   width: 16px;
   height: 16px;
   -webkit-transform: rotate(-45deg);
@@ -743,47 +725,19 @@ img {
   transform: rotate(-45deg);
   border: 2px solid #fff
 }
-.advantages--toggles--wrapper:active,
-.advantages--toggles--wrapper:focus {
+.slider--toggle--advantages:active,
+.slider--toggle--advantages:hover {
   background-color: #fff
 }
-.advantages--toggles--wrapper:nth-child(n+2) {
-  margin-left: 35px
-}
-.delta--background {
-  margin-bottom: 11%;
-  padding: 3% 2rem 0;
-  background-color: #242424;
-  position: relative
-}
-.delta--background::after {
-  content: '';
-  padding-top: 11%;
-  background: -webkit-gradient(linear,left bottom,right top,color-stop(49%,#f8f5f2),color-stop(51%,#242424)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(49%,#f8f5f2),color-stop(51%,#242424)) right/50.025% 100% no-repeat;
-  background: -o-linear-gradient(left bottom,#f8f5f2 49%,#242424 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#f8f5f2 49%,#242424 51%) right/50.025% 100% no-repeat;
-  background: linear-gradient(to right top,#f8f5f2 49%,#242424 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#f8f5f2 49%,#242424 51%) right/50.025% 100% no-repeat;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0
+.active {
+  background-color: #fff
 }
 @media (min-width:660px) {
   .advantages--toggles {
     display: none
   }
   .advantages--item {
-    display: block
-  }
-  .delta--background {
-    margin-bottom: 5%;
-    padding: 2% 2rem 0;
-    background-color: #353535
-  }
-  .delta--background::after {
-    padding-top: 5%;
-    background: -webkit-gradient(linear,left bottom,right top,color-stop(49%,#f8f5f2),color-stop(51%,#353535)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(49%,#f8f5f2),color-stop(51%,#353535)) right/50.025% 100% no-repeat;
-    background: -o-linear-gradient(left bottom,#f8f5f2 49%,#353535 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#f8f5f2 49%,#353535 51%) right/50.025% 100% no-repeat;
-    background: linear-gradient(to right top,#f8f5f2 49%,#353535 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#f8f5f2 49%,#353535 51%) right/50.025% 100% no-repeat
+    display: block!important
   }
 }
 @media (min-width:660px) and (max-width:1023px) {
@@ -794,7 +748,7 @@ img {
     padding-top: 0;
     padding-right: 35px;
     padding-left: 35px;
-    padding-bottom: 0
+    padding-bottom: 8%
   }
   .advantages--list {
     -webkit-box-orient: vertical;
@@ -838,7 +792,8 @@ img {
     margin-top: -105px
   }
   .advantages--wrapper {
-    padding-top: 0
+    padding-top: 0;
+    padding-bottom: 11%
   }
   .advantages--item {
     padding-top: 144px;
@@ -858,18 +813,24 @@ img {
   .advantages--icon--price::before {
     top: 24px
   }
-  .delta--background {
-    margin-bottom: 5.5%
-  }
-  .delta--background::after {
-    padding-top: 6%
-  }
 }
 .news {
+  position: relative;
   padding: 0;
   color: #000;
   border-bottom: 1px solid #e5ddd5;
   background-color: #f8f5f2
+}
+.news::after {
+  content: '';
+  padding-top: 11%;
+  background: -webkit-gradient(linear,left bottom,right top,color-stop(49%,#f8f5f2),color-stop(51%,#242424)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(49%,#f8f5f2),color-stop(51%,#242424)) right/50.025% 100% no-repeat;
+  background: -o-linear-gradient(left bottom,#f8f5f2 49%,#242424 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#f8f5f2 49%,#242424 51%) right/50.025% 100% no-repeat;
+  background: linear-gradient(to right top,#f8f5f2 49%,#242424 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#f8f5f2 49%,#242424 51%) right/50.025% 100% no-repeat;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0
 }
 .news--wrapper {
   position: relative;
@@ -960,6 +921,12 @@ img {
   border: 1px solid #e5ddd5
 }
 @media (min-width:660px) {
+  .news::after {
+    padding-top: 6%;
+    background: -webkit-gradient(linear,left bottom,right top,color-stop(49%,#f8f5f2),color-stop(51%,#353535)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(49%,#f8f5f2),color-stop(51%,#353535)) right/50.025% 100% no-repeat;
+    background: -o-linear-gradient(left bottom,#f8f5f2 49%,#353535 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#f8f5f2 49%,#353535 51%) right/50.025% 100% no-repeat;
+    background: linear-gradient(to right top,#f8f5f2 49%,#353535 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#f8f5f2 49%,#353535 51%) right/50.025% 100% no-repeat
+  }
   .news--wrapper {
     padding-top: 50px;
     padding-right: 0;
@@ -998,6 +965,12 @@ img {
   }
 }
 @media (min-width:1024px) {
+  .news::after {
+    padding-top: 4%;
+    background: -webkit-gradient(linear,left bottom,right top,color-stop(50%,#f8f5f2),color-stop(51%,#353535)) left/50.025% 100% no-repeat,-webkit-gradient(linear,right bottom,left top,color-stop(50%,#f8f5f2),color-stop(51%,#353535)) right/50.025% 100% no-repeat;
+    background: -o-linear-gradient(left bottom,#f8f5f2 50%,#353535 51%) left/50.025% 100% no-repeat,-o-linear-gradient(right bottom,#f8f5f2 50%,#353535 51%) right/50.025% 100% no-repeat;
+    background: linear-gradient(to right top,#f8f5f2 50%,#353535 51%) left/50.025% 100% no-repeat,linear-gradient(to left top,#f8f5f2 50%,#353535 51%) right/50.025% 100% no-repeat
+  }
   .news--wrapper {
     padding-top: 68px;
     padding-bottom: 40px
@@ -1094,7 +1067,7 @@ img {
 }
 .slider--toggle--review {
   display: block;
-  width: 12px;
+  width: 16px;
   height: 16px;
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -1105,7 +1078,7 @@ img {
 .slider--toggle--review:hover {
   background-color: #000
 }
-.active {
+.activeTwo {
   background-color: #000
 }
 @media (min-width:660px) {
